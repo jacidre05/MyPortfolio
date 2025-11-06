@@ -1,0 +1,89 @@
+/* Wrapper to handle padding and centering the message */
+.home-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Existing home-container styling */
+.home-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+/* Image styling */
+.home-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Text styling */
+.home-text {
+  flex: 1;
+  min-width: 250px;
+  line-height: 1.6;
+}
+
+.home-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #eeb8b8;
+}
+
+.home-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e2e0e0;
+}
+
+.home-message {
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f8f8d6;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.home-message p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .home-text {
+    margin-top: 20px;
+  }
+
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+
+  .home-message {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,138 @@
+/* Container */
+.about-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(120deg, #a9b3d6, #c5a0a0, #e08187);
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.about-title {
+  text-align: center;
+  font-family: "Brush Script MT", cursive;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4f46e5; /* Indigo */
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Content Flex */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-info,
+.about-info p,
+.about-info h2,
+.about-info h3,
+.work-item p,
+.work-item h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper to force fill */
+.about-image-wrapper {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;         /* Ensures anything outside the circle is hidden */
+  border: 4px solid #6366f1; /* Indigo border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e5e7eb; /* Light gray fallback */
+  position: relative;
+  background-size: stretch;     /* Image fully fills the circle */
+  background-position: center;/* Center image inside circle */
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+/* Image fills wrapper completely */
+.about-image-wrapper .about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Fill the circle fully */
+  object-position: center; /* Center image inside circle */
+  display: block;
+}
+
+/* Info Column */
+.about-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Sections */
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #db2777; /* Pink */
+  border-bottom: 2px solid #f9a8d4; /* Pink accent */
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  color: #374151; /* Dark gray */
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Highlights */
+.highlight {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Work Items */
+.work-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4f46e5; /* Indigo */
+  margin-bottom: 0.25rem;
+}
+
+.work-item .date {
+  font-size: 0.875rem;
+  color: #6b7280; /* Gray */
+  margin-bottom: 0.5rem;
+}
+
+.work-item p {
+  margin-left: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-image-wrapper {
+    width: 140px;   /* Smaller wrapper */
+    height: 140px;  /* Smaller wrapper */
+  }
+  .about-image-wrapper .about-image {
+    width: 100%;   /* Always fill wrapper */
+    height: 100%;  /* Always fill wrapper */
+  }
+}
