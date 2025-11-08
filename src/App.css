@@ -1,0 +1,31 @@
+/* ===== App Wrapper ===== */
+.app-container {
+  min-height: 100%;
+  background: transparent;
+}
+
+.page-content {
+  min-height: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar & Footer ===== */
+nav, footer {
+  background: rgba(10,10,10,0.85); /* semi-transparent over background */
+  color: #e0e0e0;
+}
+
+/* ===== Links Hover ===== */
+a {
+  color: #00ff99;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 6px #00ffcc;
+  text-decoration: underline;
+}

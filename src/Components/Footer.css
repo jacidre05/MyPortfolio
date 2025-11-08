@@ -1,0 +1,97 @@
+/* === Footer Base Styles === */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #010a14;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 10px 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+}
+
+/* Decorative line above footer text */
+.footer::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #f0f0f0;
+  margin: 0 auto 8px auto;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+/* Footer text */
+.footer p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* wrap text on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+/* Hover effect */
+.footer:hover {
+  background-color: #2a2a2a;
+}
+
+/* === Mobile-specific Adjustments === */
+@media (max-width: 768px) {
+  .footer {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  .footer::before {
+    width: 50px;
+    margin-bottom: 6px;
+  }
+
+  .footer p {
+    gap: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+  }
+
+  .footer::before {
+    width: 40px;
+    margin-bottom: 5px;
+  }
+
+  .footer p {
+    gap: 3px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Optional: Ensure footer content is readable on very small screens */
+@media (max-width: 360px) {
+  .footer p {
+    flex-direction: column; /* stack text vertically */
+    gap: 2px;
+    font-size: 0.72rem;
+  }
+
+  .footer::before {
+    width: 35px;
+  }
+}

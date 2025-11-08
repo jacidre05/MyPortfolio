@@ -1,0 +1,213 @@
+/* === Keyframes for Slide-in Animations === */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* === Contact Container === */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 90%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background-color: transparent;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* === Left Side: Form === */
+.form-wrapper {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* === Neon Glow Headings === */
+.contact-form h2 {
+  margin-bottom: 1rem;
+  color: #00ff00;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-shadow: none;
+  animation: slideInLeft 1s ease-out forwards;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.contact-form h2:hover {
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
+}
+
+/* === Inputs & Textarea === */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #0ccc00;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.6;
+  background-color: #111;
+  color: #e0e0e0;
+  outline: none;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.contact-form input:nth-child(2) { animation-delay: 0.3s; }
+.contact-form input:nth-child(3) { animation-delay: 0.4s; }
+.contact-form textarea { animation-delay: 0.5s; }
+
+.contact-form input:hover,
+.contact-form input:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+  border-color: #00ff00;
+  box-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
+  color: #00ff00;
+}
+
+/* === Button === */
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #0056b3;
+  box-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
+  color: #00ff00;
+}
+
+/* === Right Side: Image === */
+.contact-image {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-image img {
+  max-width: 75%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* === Other text neon effect on hover === */
+.contact-container p:hover,
+.contact-container span:hover,
+.contact-container li:hover {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 5px #00ff00;
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    width: 95%;
+    margin: 2rem auto;
+  }
+
+  .form-wrapper,
+  .contact-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .contact-image {
+    height: 250px;
+    margin-top: 1.5rem;
+  }
+
+  .contact-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form button:focus {
+    border-color: #00ff00;
+    box-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 20px #00ff00;
+    color: #00ff00;
+  }
+}
