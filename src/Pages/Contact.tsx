@@ -29,7 +29,8 @@ function Contact() {
       {/* Left side: form */}
       <div className="form-wrapper">
         <form className="contact-form" onSubmit={sendEmail}>
-          <h2>Let’s Bring Your Ideas to Life!</h2>
+          <h1>Let’s Bring Your Ideas to Life!</h1>
+          <p>Have a question, project idea, or just want to say hi? Fill out the form below and I’ll get back to you as soon as possible!</p>
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required />
